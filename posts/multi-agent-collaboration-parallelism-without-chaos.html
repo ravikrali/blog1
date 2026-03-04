@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Agent Collaboration: Parallelism Without Chaos • R2 Data Vision</title>
+  <meta name="description" content="Patterns for coordinating specialist agents—sequential, parallel, hierarchical—so complex work completes faster with fewer errors."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">Multi-Agent</span> <span class="tag">Platform Engineering</span> <span class="tag">Delivery</span> <span>•</span> <span>1 min read</span> <span>•</span> <span>2026-03-04</span></div>
+    <h1>Multi-Agent Collaboration: Parallelism Without Chaos</h1>
+    <p class="lede">Patterns for coordinating specialist agents—sequential, parallel, hierarchical—so complex work completes faster with fewer errors.</p>
+    
+    <div class="toc">
+      <h4>On this page</h4>
+      <a href="#choose-the-right-collaboration-model">Choose the right collaboration model</a>
+<a href="#specialization-wins">Specialization wins</a>
+<a href="#conflict-management">Conflict management</a>
+    </div>
+    
+    
+    <div class="diagramWrap">
+      <div class="mermaid">
+graph LR
+O[Orchestrator] --> A[Agent: Impact]
+O --> B[Agent: Implementation]
+O --> C[Agent: Tests]
+O --> D[Agent: Docs]
+A --> V[Validation]
+B --> V
+C --> V
+D --> V
+V --> H[Supervisor Review]
+      </div>
+    </div>
+    
+    <h2 id="choose-the-right-collaboration-model">Choose the right collaboration model</h2>
+<p>Sequential pipelines work for linear flows. Parallel execution accelerates decomposable tasks. Hierarchical orchestration handles complex trade-offs and conflict resolution.</p>
+<h2 id="specialization-wins">Specialization wins</h2>
+<p>Domain-specific agents (integration, testing, documentation, compliance) improve quality and reduce rework. The orchestrator’s job is to manage handoffs and context.</p>
+<h2 id="conflict-management">Conflict management</h2>
+<p>Define precedence rules, use validation agents, and rely on policy gates. Human approval remains the final authority for business-critical decisions.</p>
+
+    <h2 id="implementation-notes">Implementation notes</h2>
+    <p>Use this as a reference pattern, then tailor it to your enterprise boundaries, risk tiers, and standards library. The goal is repeatable execution with measurable governance.</p>
+    <pre class="code"><code class="language-yaml"># Example: policy gate in CI (conceptual)
+checks:
+  - name: architecture-policy
+    tool: opa
+    input: build/metadata.json
+    fail_message: "Policy violation: non-standard integration pattern"
+  - name: security-scan
+    tool: trivy
+    target: .
+</code></pre>
+    <blockquote>Premium takeaway: treat agents as part of the operating model—governed by policies, supervised by humans, measured by outcomes.</blockquote>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:800;margin-bottom:6px">Next up</div>
+      <div class="small">Explore more articles from the home page, or use the search bar to jump to a concept.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

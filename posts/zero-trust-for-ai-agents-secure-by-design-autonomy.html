@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zero Trust for AI Agents: Secure-by-Design Autonomy • R2 Data Vision</title>
+  <meta name="description" content="Treat agents as untrusted actors by default: least privilege, JIT access, continuous verification, and comprehensive audit trails."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">Zero Trust</span> <span class="tag">Security</span> <span class="tag">AI Governance</span> <span>•</span> <span>1 min read</span> <span>•</span> <span>2026-03-04</span></div>
+    <h1>Zero Trust for AI Agents: Secure-by-Design Autonomy</h1>
+    <p class="lede">Treat agents as untrusted actors by default: least privilege, JIT access, continuous verification, and comprehensive audit trails.</p>
+    
+    <div class="toc">
+      <h4>On this page</h4>
+      <a href="#core-principles">Core principles</a>
+<a href="#practical-controls">Practical controls</a>
+<a href="#auditable-operations">Auditable operations</a>
+    </div>
+    
+    
+    <div class="diagramWrap">
+      <div class="mermaid">
+flowchart TD
+ID[Per-Agent Identity] --> RBAC[Least-Privilege RBAC]
+RBAC --> JIT[Just-in-Time Tokens]
+JIT --> NET[Network Isolation]
+NET --> ACT[Agent Actions]
+ACT --> LOG[Immutable Audit Logs]
+ACT --> POL[Policy Gate]
+POL -->|Sensitive| HUM[Human Approval]
+      </div>
+    </div>
+    
+    <h2 id="core-principles">Core principles</h2>
+<p>Least privilege, just-in-time access, continuous verification, comprehensive auditing, and assume breach. These principles reduce blast radius when agents behave unexpectedly.</p>
+<h2 id="practical-controls">Practical controls</h2>
+<p>Isolated execution environments, RBAC per agent function, short-lived tokens, private networking, data masking for PII, and mandatory scanning of generated code.</p>
+<h2 id="auditable-operations">Auditable operations</h2>
+<p>Every action needs a correlation ID, policy context, and human approval record when applicable. Security isn’t a checklist—it’s an operational system.</p>
+
+    <h2 id="implementation-notes">Implementation notes</h2>
+    <p>Use this as a reference pattern, then tailor it to your enterprise boundaries, risk tiers, and standards library. The goal is repeatable execution with measurable governance.</p>
+    <pre class="code"><code class="language-yaml"># Example: policy gate in CI (conceptual)
+checks:
+  - name: architecture-policy
+    tool: opa
+    input: build/metadata.json
+    fail_message: "Policy violation: non-standard integration pattern"
+  - name: security-scan
+    tool: trivy
+    target: .
+</code></pre>
+    <blockquote>Premium takeaway: treat agents as part of the operating model—governed by policies, supervised by humans, measured by outcomes.</blockquote>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:800;margin-bottom:6px">Next up</div>
+      <div class="small">Explore more articles from the home page, or use the search bar to jump to a concept.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

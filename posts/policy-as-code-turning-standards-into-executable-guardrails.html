@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Policy-as-Code: Turning Standards into Executable Guardrails • R2 Data Vision</title>
+  <meta name="description" content="Encode security, architecture, and data governance rules so every commit is validated automatically—before drift reaches production."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">Policy-as-Code</span> <span class="tag">Compliance</span> <span class="tag">Architecture-as-Code</span> <span>•</span> <span>1 min read</span> <span>•</span> <span>2026-03-04</span></div>
+    <h1>Policy-as-Code: Turning Standards into Executable Guardrails</h1>
+    <p class="lede">Encode security, architecture, and data governance rules so every commit is validated automatically—before drift reaches production.</p>
+    
+    <div class="toc">
+      <h4>On this page</h4>
+      <a href="#why-policy-as-code">Why policy-as-code</a>
+<a href="#policy-categories-that-matter">Policy categories that matter</a>
+<a href="#operationalizing-policy">Operationalizing policy</a>
+    </div>
+    
+    
+    <div class="diagramWrap">
+      <div class="mermaid">
+flowchart LR
+D[Developer / Agent PR] --> C[CI Pipeline]
+C --> P[Policy Checks]
+P -->|Pass| T[Tests]
+P -->|Fail| F[Fix Guidance]
+T -->|Pass| M[Merge]
+M --> DEP[Deploy Gate]
+DEP -->|Pass| PROD[Production]
+      </div>
+    </div>
+    
+    <h2 id="why-policy-as-code">Why policy-as-code</h2>
+<p>Periodic review boards are too slow for modern delivery. Policy-as-code makes governance continuous: validate at design-time, commit-time, deploy-time, and runtime.</p>
+<h2 id="policy-categories-that-matter">Policy categories that matter</h2>
+<p>Security (auth, encryption, secrets), architecture (approved integration patterns, API design), data governance (PII handling, retention), compliance (audit evidence and change control).</p>
+<h2 id="operationalizing-policy">Operationalizing policy</h2>
+<p>Keep policies in version control, implement clear violation messages, and measure drift reduction as a first-class KPI. Policies should generate evidence automatically for audits.</p>
+
+    <h2 id="implementation-notes">Implementation notes</h2>
+    <p>Use this as a reference pattern, then tailor it to your enterprise boundaries, risk tiers, and standards library. The goal is repeatable execution with measurable governance.</p>
+    <pre class="code"><code class="language-yaml"># Example: policy gate in CI (conceptual)
+checks:
+  - name: architecture-policy
+    tool: opa
+    input: build/metadata.json
+    fail_message: "Policy violation: non-standard integration pattern"
+  - name: security-scan
+    tool: trivy
+    target: .
+</code></pre>
+    <blockquote>Premium takeaway: treat agents as part of the operating model—governed by policies, supervised by humans, measured by outcomes.</blockquote>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:800;margin-bottom:6px">Next up</div>
+      <div class="small">Explore more articles from the home page, or use the search bar to jump to a concept.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

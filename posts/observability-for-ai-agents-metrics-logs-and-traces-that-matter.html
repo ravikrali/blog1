@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Observability for AI Agents: Metrics, Logs, and Traces that Matter • R2 Data Vision</title>
+  <meta name="description" content="A practical telemetry blueprint for supervising agent behavior, detecting drift, and proving value with measurable outcomes."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">Observability</span> <span class="tag">Telemetry</span> <span class="tag">Operations</span> <span>•</span> <span>1 min read</span> <span>•</span> <span>2026-03-04</span></div>
+    <h1>Observability for AI Agents: Metrics, Logs, and Traces that Matter</h1>
+    <p class="lede">A practical telemetry blueprint for supervising agent behavior, detecting drift, and proving value with measurable outcomes.</p>
+    
+    <div class="toc">
+      <h4>On this page</h4>
+      <a href="#the-pillars">The pillars</a>
+<a href="#operational-dashboards">Operational dashboards</a>
+<a href="#drift-and-hallucination-controls">Drift and hallucination controls</a>
+    </div>
+    
+    
+    <div class="diagramWrap">
+      <div class="mermaid">
+graph TD
+A[Agent Task] --> M[Metrics]
+A --> L[Logs]
+A --> T[Traces]
+A --> C[Confidence + Model Version]
+M --> D[Dashboards]
+L --> D
+T --> D
+C --> D
+D --> E[Alerts + Escalations]
+      </div>
+    </div>
+    
+    <h2 id="the-pillars">The pillars</h2>
+<p>Metrics (performance + business outcomes), logs (structured + redacted), and traces (distributed, end-to-end). Add agent-specific telemetry: confidence scores and model/version lineage.</p>
+<h2 id="operational-dashboards">Operational dashboards</h2>
+<p>Track: task success rate, time-to-complete, first-time acceptance rate, prevented policy violations, cost avoidance, and MTTR for escalations.</p>
+<h2 id="drift-and-hallucination-controls">Drift and hallucination controls</h2>
+<p>Monitor confidence drops, repeated retries, unusual access patterns, and mismatches between generated artifacts and the knowledge base. Build escalation paths into the platform.</p>
+
+    <h2 id="implementation-notes">Implementation notes</h2>
+    <p>Use this as a reference pattern, then tailor it to your enterprise boundaries, risk tiers, and standards library. The goal is repeatable execution with measurable governance.</p>
+    <pre class="code"><code class="language-yaml"># Example: policy gate in CI (conceptual)
+checks:
+  - name: architecture-policy
+    tool: opa
+    input: build/metadata.json
+    fail_message: "Policy violation: non-standard integration pattern"
+  - name: security-scan
+    tool: trivy
+    target: .
+</code></pre>
+    <blockquote>Premium takeaway: treat agents as part of the operating model—governed by policies, supervised by humans, measured by outcomes.</blockquote>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:800;margin-bottom:6px">Next up</div>
+      <div class="small">Explore more articles from the home page, or use the search bar to jump to a concept.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

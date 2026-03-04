@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cortex: Building an AI-Powered Enterprise Knowledgebase • R2 Data Vision</title>
+  <meta name="description" content="A premium blueprint for an enterprise metadata intelligence layer combining graph relationships and vector semantics for grounded agentic work."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">Cortex</span> <span class="tag">Knowledge Graph</span> <span class="tag">Vector Search</span> <span class="tag">RAG</span> <span>•</span> <span>1 min read</span> <span>•</span> <span>2026-03-04</span></div>
+    <h1>Cortex: Building an AI-Powered Enterprise Knowledgebase</h1>
+    <p class="lede">A premium blueprint for an enterprise metadata intelligence layer combining graph relationships and vector semantics for grounded agentic work.</p>
+    
+    <div class="toc">
+      <h4>On this page</h4>
+      <a href="#the-problem-cortex-solves">The problem Cortex solves</a>
+<a href="#graph-vector-hybrid-model">Graph + vector hybrid model</a>
+<a href="#from-knowledge-to-action">From knowledge to action</a>
+    </div>
+    
+    
+    <div class="diagramWrap">
+      <div class="mermaid">
+graph TD
+A[Harvest Agents] --> B[Normalization + Entity Resolution]
+B --> C[Knowledge Graph]
+B --> D[Vector Index]
+C --> E[Impact Analysis Agent]
+D --> E
+E --> F[Supervisor Console Approval]
+F --> G[Code + Tests + Docs]
+      </div>
+    </div>
+    
+    <h2 id="the-problem-cortex-solves">The problem Cortex solves</h2>
+<p>Enterprises can’t answer basic dependency questions quickly because critical metadata is scattered across repos, integration platforms, data pipelines, cloud configs, and team wikis. Cortex centralizes *metadata intelligence* without replicating business data.</p>
+<h2 id="graph-vector-hybrid-model">Graph + vector hybrid model</h2>
+<p>Graph relationships handle structured queries (“who depends on this API?”). Vector embeddings handle semantic recall (“show me patterns like this integration”). Together they form a grounded control plane for agents and humans.</p>
+<h2 id="from-knowledge-to-action">From knowledge to action</h2>
+<p>Cortex is most valuable when the knowledge base becomes operational: impact analysis, tool/pattern recommendation, code generation, test automation, and documentation updates—under supervisory control and policy gates.</p>
+
+    <h2 id="implementation-notes">Implementation notes</h2>
+    <p>Use this as a reference pattern, then tailor it to your enterprise boundaries, risk tiers, and standards library. The goal is repeatable execution with measurable governance.</p>
+    <pre class="code"><code class="language-yaml"># Example: policy gate in CI (conceptual)
+checks:
+  - name: architecture-policy
+    tool: opa
+    input: build/metadata.json
+    fail_message: "Policy violation: non-standard integration pattern"
+  - name: security-scan
+    tool: trivy
+    target: .
+</code></pre>
+    <blockquote>Premium takeaway: treat agents as part of the operating model—governed by policies, supervised by humans, measured by outcomes.</blockquote>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:800;margin-bottom:6px">Next up</div>
+      <div class="small">Explore more articles from the home page, or use the search bar to jump to a concept.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI News • R2 Data Vision</title>
+  <meta name="description" content="Latest AI news via RSS feeds."/>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('pre code').forEach(el=>hljs.highlightElement(el));});</script>
+  
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="R2 Data Vision Home">
+      <div class="logo"></div><span>R2 Data Vision</span>
+    </a>
+    <div class="navlinks">
+      <a href="/index.html">Blog</a>
+      <a href="/news.html">AI News</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="article">
+    <div class="postMeta"><span class="tag">RSS</span> <span class="tag">AI</span> <span>•</span> <span>Auto-updated</span></div>
+    <h1>Latest AI News</h1>
+    <p class="lede">
+      A lightweight RSS view pulling from reputable AI-focused sources. If you hit rate limits, refresh later.
+    </p>
+    <div class="panel">
+      <div style="font-weight:900;margin-bottom:6px;">Sources</div>
+      <div class="small">MIT Technology Review • VentureBeat • NVIDIA Blog • Google DeepMind</div>
+    </div>
+    <div style="margin-top:14px;" id="aiNews"></div>
+    <div class="hr"></div>
+    <div class="panel">
+      <div style="font-weight:900;margin-bottom:6px;">Want different sources?</div>
+      <div class="small">Edit <span style="font-family:var(--mono)">app.js</span> to add/remove feeds.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

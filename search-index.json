@@ -1,0 +1,123 @@
+[
+  {
+    "title": "Enterprise Transformation with Agentic Coding",
+    "url": "/posts/enterprise-transformation-with-agentic-coding.html",
+    "excerpt": "Why agentic systems change IT economics: from episodic governance to continuous compliance, from manual integration to supervised automation.",
+    "tags": [
+      "Agentic Coding",
+      "Enterprise Architecture",
+      "Operating Model"
+    ],
+    "readingTime": "1 min read",
+    "content": "Why agentic systems change IT economics: from episodic governance to continuous compliance, from manual integration to supervised automation. Agentic coding is not a \u201cbetter autocomplete.\u201d It is an operating model shift: autonomous agents can analyze repositories, generate plans, write code with tests, validate against standards, and keep documentation current. This collapses the traditional separation between architecture (think) and engineering (build). In large transformations, the biggest time sinks are impact analysis, integration work, regression testing, and governance cycles. Agentic systems compress these by turning architecture intent into executable guardrails and automating low-risk execution with human approval gates. Adopt in phases: (1) visibility and readiness, (2) assisted execution, (3) autonomous governance, (4) AI-native operating model. Early wins come from harvesting architecture truth, implementing policy-as-code, and proving impact analysis + integration automation on repeatable patterns."
+  },
+  {
+    "title": "Cortex: Building an AI-Powered Enterprise Knowledgebase",
+    "url": "/posts/cortex-building-an-ai-powered-enterprise-knowledgebase.html",
+    "excerpt": "A premium blueprint for an enterprise metadata intelligence layer combining graph relationships and vector semantics for grounded agentic work.",
+    "tags": [
+      "Cortex",
+      "Knowledge Graph",
+      "Vector Search",
+      "RAG"
+    ],
+    "readingTime": "1 min read",
+    "content": "A premium blueprint for an enterprise metadata intelligence layer combining graph relationships and vector semantics for grounded agentic work. Enterprises can\u2019t answer basic dependency questions quickly because critical metadata is scattered across repos, integration platforms, data pipelines, cloud configs, and team wikis. Cortex centralizes *metadata intelligence* without replicating business data. Graph relationships handle structured queries (\u201cwho depends on this API?\u201d). Vector embeddings handle semantic recall (\u201cshow me patterns like this integration\u201d). Together they form a grounded control plane for agents and humans. Cortex is most valuable when the knowledge base becomes operational: impact analysis, tool/pattern recommendation, code generation, test automation, and documentation updates\u2014under supervisory control and policy gates."
+  },
+  {
+    "title": "Agentic Orchestration Layer: The Control Plane Pattern",
+    "url": "/posts/agentic-orchestration-layer-the-control-plane-pattern.html",
+    "excerpt": "How to design a centralized orchestration layer that coordinates specialist agents, enforces policies, and scales safely.",
+    "tags": [
+      "Architecture Patterns",
+      "Orchestration",
+      "Governance"
+    ],
+    "readingTime": "1 min read",
+    "content": "How to design a centralized orchestration layer that coordinates specialist agents, enforces policies, and scales safely. Enterprise agent ecosystems need more than \u201cagents that can code.\u201d You need an orchestration layer that registers agent capabilities, queues tasks, manages dependencies, and provides auditable control for regulated work. A strong orchestration layer includes: agent registry, task queue, orchestration engine, policy engine, and monitoring/telemetry. Treat it like a platform product with SLOs, auditability, and change control. Use event-driven messaging, circuit breakers, strict permissions, and rollback playbooks. Scaling agents without these controls creates a coordination tax and operational risk."
+  },
+  {
+    "title": "Human-in-the-Loop (HITL): Risk-Tiered Autonomy Done Right",
+    "url": "/posts/human-in-the-loop-hitl-risk-tiered-autonomy-done-right.html",
+    "excerpt": "A practical tier model that balances velocity with accountability\u2014especially in regulated environments.",
+    "tags": [
+      "HITL",
+      "Governance",
+      "Risk Management"
+    ],
+    "readingTime": "1 min read",
+    "content": "A practical tier model that balances velocity with accountability\u2014especially in regulated environments. A mature HITL model defines explicit autonomy tiers: Fully Autonomous, Notification Only, Approval Required, Human Only. The key is mapping tiers to risk categories and continuously revisiting the mapping as confidence grows. Escalate when changes touch security boundaries, customer-facing systems, production data, or regulatory evidence. Also escalate for novel scenarios outside training coverage or when confidence drops. Make approvals fast: show diffs, policy checks, test results, and a concise rationale. Humans should supervise decisions, not hunt for context."
+  },
+  {
+    "title": "Policy-as-Code: Turning Standards into Executable Guardrails",
+    "url": "/posts/policy-as-code-turning-standards-into-executable-guardrails.html",
+    "excerpt": "Encode security, architecture, and data governance rules so every commit is validated automatically\u2014before drift reaches production.",
+    "tags": [
+      "Policy-as-Code",
+      "Compliance",
+      "Architecture-as-Code"
+    ],
+    "readingTime": "1 min read",
+    "content": "Encode security, architecture, and data governance rules so every commit is validated automatically\u2014before drift reaches production. Periodic review boards are too slow for modern delivery. Policy-as-code makes governance continuous: validate at design-time, commit-time, deploy-time, and runtime. Security (auth, encryption, secrets), architecture (approved integration patterns, API design), data governance (PII handling, retention), compliance (audit evidence and change control). Keep policies in version control, implement clear violation messages, and measure drift reduction as a first-class KPI. Policies should generate evidence automatically for audits."
+  },
+  {
+    "title": "Multi-Agent Collaboration: Parallelism Without Chaos",
+    "url": "/posts/multi-agent-collaboration-parallelism-without-chaos.html",
+    "excerpt": "Patterns for coordinating specialist agents\u2014sequential, parallel, hierarchical\u2014so complex work completes faster with fewer errors.",
+    "tags": [
+      "Multi-Agent",
+      "Platform Engineering",
+      "Delivery"
+    ],
+    "readingTime": "1 min read",
+    "content": "Patterns for coordinating specialist agents\u2014sequential, parallel, hierarchical\u2014so complex work completes faster with fewer errors. Sequential pipelines work for linear flows. Parallel execution accelerates decomposable tasks. Hierarchical orchestration handles complex trade-offs and conflict resolution. Domain-specific agents (integration, testing, documentation, compliance) improve quality and reduce rework. The orchestrator\u2019s job is to manage handoffs and context. Define precedence rules, use validation agents, and rely on policy gates. Human approval remains the final authority for business-critical decisions."
+  },
+  {
+    "title": "Zero Trust for AI Agents: Secure-by-Design Autonomy",
+    "url": "/posts/zero-trust-for-ai-agents-secure-by-design-autonomy.html",
+    "excerpt": "Treat agents as untrusted actors by default: least privilege, JIT access, continuous verification, and comprehensive audit trails.",
+    "tags": [
+      "Zero Trust",
+      "Security",
+      "AI Governance"
+    ],
+    "readingTime": "1 min read",
+    "content": "Treat agents as untrusted actors by default: least privilege, JIT access, continuous verification, and comprehensive audit trails. Least privilege, just-in-time access, continuous verification, comprehensive auditing, and assume breach. These principles reduce blast radius when agents behave unexpectedly. Isolated execution environments, RBAC per agent function, short-lived tokens, private networking, data masking for PII, and mandatory scanning of generated code. Every action needs a correlation ID, policy context, and human approval record when applicable. Security isn\u2019t a checklist\u2014it\u2019s an operational system."
+  },
+  {
+    "title": "Agent-Augmented CI/CD: From Codegen to Continuous Validation",
+    "url": "/posts/agent-augmented-ci-cd-from-codegen-to-continuous-validation.html",
+    "excerpt": "Embed agents into pipelines to generate code + tests, validate impacts, enforce policies, deploy progressively, and update documentation automatically.",
+    "tags": [
+      "CI/CD",
+      "DevOps",
+      "Testing Automation"
+    ],
+    "readingTime": "1 min read",
+    "content": "Embed agents into pipelines to generate code + tests, validate impacts, enforce policies, deploy progressively, and update documentation automatically. Code generation (with tests), impact analysis, policy validation, progressive deployment, and post-deployment verification. Each stage becomes faster and more consistent with agent support. Agents should generate unit, integration, and contract tests. A target of 85\u201395% coverage is achievable for standard patterns when tests are produced alongside code. Treat docs and diagrams as generated artifacts. After merge, update architecture views, runbooks, and lineage diagrams automatically."
+  },
+  {
+    "title": "Observability for AI Agents: Metrics, Logs, and Traces that Matter",
+    "url": "/posts/observability-for-ai-agents-metrics-logs-and-traces-that-matter.html",
+    "excerpt": "A practical telemetry blueprint for supervising agent behavior, detecting drift, and proving value with measurable outcomes.",
+    "tags": [
+      "Observability",
+      "Telemetry",
+      "Operations"
+    ],
+    "readingTime": "1 min read",
+    "content": "A practical telemetry blueprint for supervising agent behavior, detecting drift, and proving value with measurable outcomes. Metrics (performance + business outcomes), logs (structured + redacted), and traces (distributed, end-to-end). Add agent-specific telemetry: confidence scores and model/version lineage. Track: task success rate, time-to-complete, first-time acceptance rate, prevented policy violations, cost avoidance, and MTTR for escalations. Monitor confidence drops, repeated retries, unusual access patterns, and mismatches between generated artifacts and the knowledge base. Build escalation paths into the platform."
+  },
+  {
+    "title": "Cloud-Native Reference Architecture for Enterprise Agent Platforms",
+    "url": "/posts/cloud-native-reference-architecture-for-enterprise-agent-platforms.html",
+    "excerpt": "A layered architecture for building scalable agent platforms: interfaces, orchestration, execution, platform services, integrations, knowledge, infrastructure.",
+    "tags": [
+      "Cloud-Native",
+      "Reference Architecture",
+      "Platform"
+    ],
+    "readingTime": "1 min read",
+    "content": "A layered architecture for building scalable agent platforms: interfaces, orchestration, execution, platform services, integrations, knowledge, infrastructure. Build with clear layers: presentation, orchestration, agent execution, platform services (auth/secrets/obs), integrations (repos, CI/CD, cloud APIs), knowledge layer (vector + graph), and infrastructure. Keep boundaries strict: agents run in isolated segments, access is permissioned, and data residency constraints are enforced at the platform edge. Treat the agent platform as a product: SLOs, release management, policy versioning, and continuous improvement loops with supervisors and architects."
+  }
+]
